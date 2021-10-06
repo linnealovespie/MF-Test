@@ -1,0 +1,11 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(39,5): warning MSB4211: The property "IntermediateOutputPath" is being set to a value for the first time, but it was already consumed at "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets(30,5): warning MSB4211: The property "DebugType" is being set to a value for the first time, but it was already consumed at "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets (29,5)".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(373,5): warning MSB4211: The property "CleanFile" is being set to a value for the first time, but it was already consumed at "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+  dllmain.cpp
+  Grayscale.cpp
+     Creating library C:\Users\linneamay\source\repos\mediafoundation\MF_ProtectedPlayback\x64\Release\MFT_Grayscale.lib and object C:\Users\linneamay\source\repos\mediafoundation\MF_ProtectedPlayback\x64\Release\MFT_Grayscale.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 105 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  MFT_Grayscale.vcxproj -> C:\Users\linneamay\source\repos\mediafoundation\MF_ProtectedPlayback\x64\Release\MFT_Grayscale.dll
