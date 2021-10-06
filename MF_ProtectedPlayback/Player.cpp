@@ -976,16 +976,20 @@ HRESULT CPlayer::AddTransformNode(
 
     // Create the node.
     HRESULT hr = MFCreateTopologyNode(MF_TOPOLOGY_TRANSFORM_NODE, &pNode);
+    
+    /*
     hr = CoCreateInstance(
         clsid,
         NULL,
         CLSCTX_INPROC_SERVER,
         IID_PPV_ARGS(&pMFT)
     );
+    */
     // Set the CLSID attribute.
     if (SUCCEEDED(hr))
     {
-        hr = pNode->SetObject(pMFT);
+        //hr = pNode->SetObject(pMFT);
+        hr = pNode->SetGUID(MF_TOPONODE_TRANSFORM_OBJECTID, clsid);
     }
 
     // Add the node to the topology.
