@@ -21,7 +21,6 @@
 #include <assert.h>
 #include <evr.h>
 
-
 // This sample implements a Media Foundation transform (MFT) that 
 // converts YUV video frames to grayscale. The conversion is done
 // simply by setting all of the U and V bytes to zero (0x80).

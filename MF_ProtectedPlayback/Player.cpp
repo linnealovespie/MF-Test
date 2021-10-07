@@ -934,13 +934,16 @@ HRESULT CPlayer::AddBranchToPartialTopology(IMFTopology *pTopology, IMFPresentat
         CHECK_HR(hr = pSourceSD->GetMediaTypeHandler(&pHandler));
         // Get the major media type.
         CHECK_HR(hr = pHandler->GetMajorType(&guidMajorType));
-        if (MFMediaType_Video == guidMajorType) 
+        if (MFMediaType_Video == guidMajorType)
         {
-            TRACE((L"Adding MFT to video stream"));
-            CLSID guid = { 0x2f3dbc05, 0xc011, 0x4a8f, 0xb2, 0x64, 0xe4, 0x2e, 0x35, 0xc6, 0x7b, 0xf4 };
+            TRACE((L"Adding MFT to video stream")); 
+            class __declspec(uuid("{98230571-0087-4204-b020-3282538e57d3}")) ColorConverter;
+            CLSID guid = __uuidof(ColorConverter);
+            // TODO: Change into the correct data format {98230571-0087-4204-b020-3282538e57d3}
+            //CLSID guid = { 0x98230571,0x0087, 0x4204, 0xb020, 0x3282538e57d3 };
+        
+            //{ 0x2f3dbc05, 0xc011, 0x4a8f, 0xb2, 0x64, 0xe4, 0x2e, 0x35, 0xc6, 0x7b, 0xf4 };
             CHECK_HR(hr = AddTransformNode(pTopology, guid, &pTransformNode));
-
-
 
             // Connect the source node to the transform node.
             CHECK_HR(hr = pSourceNode->ConnectOutput(0, pTransformNode, 0));
@@ -977,14 +980,6 @@ HRESULT CPlayer::AddTransformNode(
     // Create the node.
     HRESULT hr = MFCreateTopologyNode(MF_TOPOLOGY_TRANSFORM_NODE, &pNode);
     
-    /*
-    hr = CoCreateInstance(
-        clsid,
-        NULL,
-        CLSCTX_INPROC_SERVER,
-        IID_PPV_ARGS(&pMFT)
-    );
-    */
     // Set the CLSID attribute.
     if (SUCCEEDED(hr))
     {
