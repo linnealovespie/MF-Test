@@ -26,3 +26,4 @@
 #include "common.h"
 using namespace MediaFoundationSamples;
 
+#include "Microsoft.AI.MachineLearning.Native.h"
